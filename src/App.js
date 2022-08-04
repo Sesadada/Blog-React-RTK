@@ -1,25 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import BlogForm from "./components/BlogForm";
+import Posts from "./components/Posts";
+import SingleBlog from "./components/SingleBlog";
+import Layout from "./layouts/Layout";
+import { Routes, Route } from "react-router-dom";
+import EditBlog from "./components/EditBlog";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path="/" element={<Layout />}>
+        <Route index element={<Posts />} />
+        <Route path="blog">
+          <Route index element={<BlogForm />} />
+          <Route path=":blogId" element={<SingleBlog />} />
+          <Route path="edit/:blogId" element={<EditBlog />} />
+        </Route>
+      </Route>
+    </Routes>
   );
 }
 
 export default App;
+
+/*
+    <div className="flex md:gap-x-8 p-8 w-full md:flex-row md:items-start  items-center flex-col">
+      <div className="lg:w-[50%] w-[90%]">
+        <Posts />
+      </div>
+      <div className="lg:w-[50%] w-[90%]">
+        <BlogForm />
+      </div>
+    </div>
+
+*/

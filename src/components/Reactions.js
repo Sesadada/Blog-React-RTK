@@ -6,7 +6,6 @@ import {
   BsHeart,
   BsEmojiDizzy,
 } from "react-icons/bs";
-import { FaRegSurprise } from "react-icons/fa";
 
 const emoji = {
   thumbsUp: <BsHandThumbsUp />,

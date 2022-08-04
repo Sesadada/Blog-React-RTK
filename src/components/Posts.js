@@ -1,15 +1,10 @@
 import { useSelector } from "react-redux";
-import {
-  selectAllPosts,
-  getBlogError,
-  getBlogStatus,
-} from "../redux/features/blogsSlice";
+import { selectAllPosts, getBlogStatus } from "../redux/features/blogsSlice";
 import BlogExcerpt from "./BlogExcerpt";
 
 const Posts = () => {
   const blogs = useSelector(selectAllPosts);
   const blogsStatus = useSelector(getBlogStatus);
-  const blogsError = useSelector(getBlogError);
 
   let content;
   if (blogsStatus === "loading") {

@@ -21,15 +21,3 @@ function App() {
 }
 
 export default App;
-
-/*
-    <div className="flex md:gap-x-8 p-8 w-full md:flex-row md:items-start  items-center flex-col">
-      <div className="lg:w-[50%] w-[90%]">
-        <Posts />
-      </div>
-      <div className="lg:w-[50%] w-[90%]">
-        <BlogForm />
-      </div>
-    </div>
-
-*/

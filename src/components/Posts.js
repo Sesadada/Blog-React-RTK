@@ -23,20 +23,3 @@ const Posts = () => {
 };
 
 export default Posts;
-
-/*
-    <section className="flex justify-center flex-col w-2/4">
-      <h1 className="text-5xl font-black text-center mb-6">POSTS</h1>
-      {posts.map((post) => (
-        <article
-          key={post.id}
-          className="rounded-lg bg-slate-100 p-4 mt-4 border-2 border-slate-900"
-        >
-          <h3 className="text-yellow-500 font-semibold text-xl uppercase mb-3">
-            {post.title}
-          </h3>
-          <p>{post.content.substring(0, 100)}</p>
-        </article>
-      ))}
-    </section>
-*/
